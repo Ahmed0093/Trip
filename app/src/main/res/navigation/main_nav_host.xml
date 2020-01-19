@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_host"
+    app:startDestination="@id/fragment_home_search">
+
+    <fragment
+        android:id="@+id/fragment_home_search"
+        android:name="com.development.task.triphava.ui.HomeSearchFragment"
+        tools:layout="@layout/fragment_home_search">
+        <action
+            android:id="@+id/action_fragment_home_search_to_fragment_search_result"
+            app:destination="@id/fragment_search_result"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_search_result"
+        android:name="com.development.task.triphava.ui.searchResult.SearchResultFragment"
+        android:label="Trips"
+        tools:layout="@layout/fragment_search_result">
+        <action
+            android:id="@+id/action_fragment_search_result_to_fragment_trip_details"
+            app:destination="@id/fragment_trip_details" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_trip_details"
+        android:name="com.development.task.triphava.ui.searchResult.TripDetailsFragment"
+        android:label="tripDetails"
+        tools:layout="@layout/fragment_trip_details">
+
+    </fragment>
+
+</navigation>
